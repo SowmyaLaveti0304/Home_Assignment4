@@ -112,7 +112,32 @@ Two Mitigation Strategies:
   - If confidence < threshold, the system emits a “Unverified” notice or defers to a human editor instead of publishing.
 
 ## Q3: simple GAN using TensorFlow to generate handwritten digits from the MNIST dataset 
+### Tasks completed:
+- Hardware & Performance Setup: Detects your GPU (or falls back to CPU/MPS)
+- Data Loading: Downloads MNIST, normalizes it.
+- Model Construction:Defines a small Generator (noise→image) and Defines a matching Discriminator (image→real/fake score)
+- Training Prep: Sets up Adam optimizers for both nets
+- Wraps updates in mixed-precision (half-float) when CUDA is available
+- Alternating Training Loop
+- Discriminator step: learns to tell real vs. fake
+- Generator step: learns to fool the Discriminator
+- Records both losses each batch
+- Checkpointing Outputs
+### Output:
+<img width="799" alt="Screenshot 2025-06-23 at 4 24 20 PM" src="https://github.com/user-attachments/assets/25c63642-afe3-497a-bbdc-bc8d1d7da4b7" />
+
 ## Q4: Simulate a data poisoning attack on a sentiment classifier
+### Tasks completed:
+- Builded a Tiny Review Dataset: Creates positive/negative movie-review sentences plus a handful mentioning “Harry Potter.”
+- Train & Evaluate on Clean Data
+- Vectorizes text, fits a logistic-regression sentiment model, and records its accuracy & confusion matrix.
+- Poison the Training Set
+- Retrain & Re-evaluate: Fits the same model on the poisoned data and measures accuracy & confusion again.
+- Visualize the Impact: Plots a before-vs-after bar chart of overall accuracy.
+### Output:
+<img width="588" alt="Screenshot 2025-06-23 at 4 28 28 PM" src="https://github.com/user-attachments/assets/5d35f8e9-adc7-469e-a59f-723f817db561" />
+<img width="795" alt="Screenshot 2025-06-23 at 4 27 42 PM" src="https://github.com/user-attachments/assets/c8ad0746-ab48-454c-b6a0-34f69ba7ac6e" />
+
 ## Q5: Legal and Ethical Implications of GenAI
  **Legal & Ethical Concerns:**
 #### Memorizing Private Data

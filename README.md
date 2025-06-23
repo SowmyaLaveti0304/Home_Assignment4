@@ -52,10 +52,25 @@ We draw x∼Pdata(x), our ground-truth data.
 
 ---
 ### 2. Generator (G)
-Location in diagram: Big blue box labeled “Generator.”
 - **Data flow:**
  		Z →G(Z)Discriminator input
 - **Objective:**
  Generator  wants to generate samples that the Discriminator labels “real.”
 - **Training signal:**
  The red arrow from the Discriminator back into G (“Differentiable module”) carries the gradient of D’s classification loss w.r.t. G’s parameters.
+---
+### 3. Discriminator (D)
+
+- **Data flow:** Takes two inputs in parallel:
+- Real sample 
+ x → outputs D(x) (“Real” green light).
+
+ - Fake sample 
+G(z) → outputs D(G(z)) (“Fake” red light).
+
+Both scores feed into the single “Loss” box on the right.
+- **Objective:**
+It wants D(x)→1 and D(G(z))→0.
+
+- **Training signal:**
+The red arrow from the “Loss” box back into D (“Differentiable module”) is the gradient used to update D’s weights.

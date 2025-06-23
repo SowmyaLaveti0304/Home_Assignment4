@@ -20,6 +20,9 @@ This assignment covers key topics in NLP and deep learning:
 
 ---
 ## Q1: GAN Architecture 
+
+<img width="655" alt="Screenshot 2025-06-23 at 2 54 18 PM" src="https://github.com/user-attachments/assets/cf420600-fd09-4154-9d80-9870a83aead5" />
+
 ### Generator (G)
  - Takes random noise z and produces a “fake” sample G(z).
  - Goal: fool the Discriminator into thinking G(z) is real.

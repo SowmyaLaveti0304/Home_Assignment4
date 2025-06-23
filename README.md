@@ -92,3 +92,21 @@ The red arrow from the “Loss” box back into D (“Differentiable module”) 
   - Each network continually adapts to the other:
   - D becomes a sharper detector of fakes.
   - G becomes ever more skilled at mimicking the real data distribution.
+ 
+## Q2: Ethics and AI Harm  
+### Misinformation in generative AI
+
+#### Application Example:
+An AI-powered news‐summarization tool that ingests live feeds and automatically writes breaking news articles.
+- Harm: It may fabricate quotes, dates, or sources—misleading readers in real time.
+
+---
+Two Mitigation Strategies:
+
+- Fact-Verification Pipeline:
+  - After generation, automatically cross-check every named entity, quote, and statistic against a curated database of trusted outlets.
+  - If any item fails verification, either flag the story for human review or redact the suspect passage until confirmed.
+
+- Confidence-Threshold Abstention:
+  - Train the model to emit a confidence score for each claim.
+  - If confidence < threshold, the system emits a “Unverified” notice or defers to a human editor instead of publishing.

@@ -74,3 +74,18 @@ It wants D(x)→1 and D(G(z))→0.
 
 - **Training signal:**
 The red arrow from the “Loss” box back into D (“Differentiable module”) is the gradient used to update D’s weights.
+
+---
+### 4. The Adversarial Loop
+- **Discriminator update:**
+  - Freeze G.
+  - Take a minibatch of real x and fake G(z), compute and step D’s parameters to maximize it.
+
+- **Generator update:**
+  - Freeze D.
+  - Sample a fresh batch of z, generate G(z), compute and update G to minimize its loss (i.e.\ better fool D).
+
+- **Repeat**
+  - Each network continually adapts to the other:
+  - D becomes a sharper detector of fakes.
+  - G becomes ever more skilled at mimicking the real data distribution.

@@ -1,4 +1,4 @@
-# Home Assignment 3 – Summer 2025
+# Home Assignment 4 – Summer 2025
 
 **Student Name:** Sowmya Laveti  
 **Student ID:** 700771347  
@@ -110,3 +110,30 @@ Two Mitigation Strategies:
 - Confidence-Threshold Abstention:
   - Train the model to emit a confidence score for each claim.
   - If confidence < threshold, the system emits a “Unverified” notice or defers to a human editor instead of publishing.
+
+## Q3: simple GAN using TensorFlow to generate handwritten digits from the MNIST dataset 
+## Q4: Simulate a data poisoning attack on a sentiment classifier
+## Q5: Legal and Ethical Implications of GenAI
+ **Legal & Ethical Concerns:**
+#### Memorizing Private Data
+ - Privacy Violation: Models that regurgitate verbatim snippets (names, addresses, even credit-card-like strings) risk exposing individuals’ personal info, breaching GDPR/CCPA.
+ - Liability: Organizations can be held responsible if a deployed model leaks protected data.
+
+#### Generating Copyrighted Material
+- Infringement Risk: Producing large passages from works like Harry Potter may violate copyright law—even if unintentional—because it substitutes for licensed content.
+- Fair Use Ambiguity: It’s unclear how “transformative” outputs must be to qualify as fair use, creating legal gray zones for developers and end-users.
+---
+
+**Should Training Data Be Restricted?**
+Yes. At minimum, models should avoid ingesting non-public or un-licensed proprietary content:
+ - Protect Privacy & Compliance: Excluding private communications and sensitive records prevents accidental leaks and eases regulatory compliance.
+ - Respect IP Rights: Training only on public-domain or properly licensed corpora reduces infringement risk, fosters trust, and supports sustainable partnerships with rights holders.
+
+## Q6: Bias & Fairness Tools
+#### False Negative Rate Parity (Equal Opportunity)
+
+- Metric measures: For each protected group, the share of real “positives” (e.g. qualified applicants) that the model wrongly labels negative.
+
+- Why it matters: Ensures no group is systematically “missed” and denied opportunities they deserve.
+
+- How it can fail: If Group A’s FNR is, say, 20% while Group B’s is 5%, qualified members of A are disproportionately rejected.
